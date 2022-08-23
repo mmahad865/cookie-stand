@@ -39,13 +39,26 @@ let seattle = {
 }
 
 };
-seattle.CalRanCustomer();
-seattle.avrgCookiePerHour();
-console.log(seattle.numOfCustomers);
-console.log(seattle.numOfCookies);
-seattle.CalTotalCookie();
-console.log(seattle.totalCookie);
-seattle.calDisplay();
-console.log(display);
+//seattle.CalRanCustomer();
+//seattle.avrgCookiePerHour();
+//console.log(seattle.numOfCustomers);
+//console.log(seattle.numOfCookies);
+//seattle.CalTotalCookie();
+//console.log(seattle.totalCookie);
+//seattle.calDisplay();
+//console.log(display);
+
+let ListEl = document.getElementById('data');
+for (let i in seattle.numOfCookies);
+let newListEl = document.createElement('li');
+//console.log('li')
+newListEl.textContent = `${hours[i]}: ${seattle.numOfCookies[i]} cookies`
+console.log(newListEl);
+ListEl.appendChild(newListEl);
+console.log(newListEl);
+
+
+
+
 
 
