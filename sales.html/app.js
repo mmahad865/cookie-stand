@@ -41,18 +41,44 @@ let seattle = {
     render: function (){
         this.avrgCookiePerHour();
         this.calTotalCookiePerDay();
+
+
+
+
         let ListEl = document.getElementById('data');
         for (let i = 0; i < hours.length; i++) {
             let newListEl = document.createElement('li');
             newListEl.textContent = `${hours[i]}: ${seattle.numOfCookies[i]} cookies`;
             ListEl.appendChild(newListEl);
             // display[i] = `${hours[i]}: ${this.numOfCookies[i]} cookies`
-        
 
-    }
-    let totalAmount= document.createElement('li');
-    totalAmount.textContent= `Total: ${this.totalCookie} cookies` ;
-    ListEl.appendChild(totalAmount);
+        }
+        let totalAmount = document.createElement('li');
+        totalAmount.textContent= `Total: ${this.totalCookie} cookies`;
+        ListEl.appendChild(totalAmount);
+
+
+
+        let tableBody = document.getElementById('table');
+        let row = document.createElement('tr');
+
+        let th = document.createElement("th");
+        th.innerText = this.location;
+        row.appendChild(th);
+
+        for (let key in seattle.numOfCookies){
+
+            console.log(key);
+            let value = seattle.numOfCookies[key];
+            
+            let cell = document.createElement('td');
+            cell.textContent = value;
+            row.appendChild(cell);
+        }
+            tableBody.appendChild(row);
+        //tableEl.appendChild(tableEl);
+
+  
 }
 
 };
@@ -111,7 +137,7 @@ let tokyo = {
         let ListEl = document.getElementById('data2');
         for (let i = 0; i < hours.length; i++) {
             let newListEl = document.createElement('li');
-            newListEl.textContent = `${hours[i]}: ${seattle.numOfCookies[i]} cookies`;
+            newListEl.textContent = `${hours[i]}: ${tokyo.numOfCookies[i]} cookies`;
             ListEl.appendChild(newListEl);
             // display[i] = `${hours[i]}: ${this.numOfCookies[i]} cookies`
         
@@ -120,6 +146,25 @@ let tokyo = {
     let totalAmount= document.createElement('li');
     totalAmount.textContent= `Total: ${this.totalCookie} cookies` ;
     ListEl.appendChild(totalAmount);
+
+
+     let tableBody = document.getElementById('table');
+        let row = document.createElement('tr');
+
+        let th = document.createElement("th");
+        th.innerText = this.location;
+        row.appendChild(th);
+
+        for (let key in tokyo.numOfCookies){
+
+            console.log(key);
+            let value = tokyo.numOfCookies[key];
+            
+            let cell = document.createElement('td');
+            cell.textContent = value;
+            row.appendChild(cell);
+        }
+            tableBody.appendChild(row);
 }
 
 };
@@ -178,7 +223,7 @@ let dubai = {
         let ListEl = document.getElementById('data3');
         for (let i = 0; i < hours.length; i++) {
             let newListEl = document.createElement('li');
-            newListEl.textContent = `${hours[i]}: ${seattle.numOfCookies[i]} cookies`;
+            newListEl.textContent = `${hours[i]}: ${dubai.numOfCookies[i]} cookies`;
             ListEl.appendChild(newListEl);
             // display[i] = `${hours[i]}: ${this.numOfCookies[i]} cookies`
         
@@ -187,6 +232,24 @@ let dubai = {
     let totalAmount= document.createElement('li');
     totalAmount.textContent= `Total: ${this.totalCookie} cookies` ;
     ListEl.appendChild(totalAmount);
+
+    let tableBody = document.getElementById('table');
+        let row = document.createElement('tr');
+
+        let th = document.createElement("th");
+        th.innerText = this.location;
+        row.appendChild(th);
+
+        for (let key in dubai.numOfCookies){
+
+            console.log(key);
+            let value = dubai.numOfCookies[key];
+            
+            let cell = document.createElement('td');
+            cell.textContent = value;
+            row.appendChild(cell);
+        }
+            tableBody.appendChild(row);
 }
 
 };
@@ -243,7 +306,7 @@ let paris = {
         let ListEl = document.getElementById('data4');
         for (let i = 0; i < hours.length; i++) {
             let newListEl = document.createElement('li');
-            newListEl.textContent = `${hours[i]}: ${seattle.numOfCookies[i]} cookies`;
+            newListEl.textContent = `${hours[i]}: ${paris.numOfCookies[i]} cookies`;
             ListEl.appendChild(newListEl);
             // display[i] = `${hours[i]}: ${this.numOfCookies[i]} cookies`
         
@@ -252,6 +315,24 @@ let paris = {
     let totalAmount= document.createElement('li');
     totalAmount.textContent= `Total: ${this.totalCookie} cookies` ;
     ListEl.appendChild(totalAmount);
+
+    let tableBody = document.getElementById('table');
+        let row = document.createElement('tr');
+
+        let th = document.createElement("th");
+        th.innerText = this.location;
+        row.appendChild(th);
+
+        for (let key in paris.numOfCookies){
+
+            console.log(key);
+            let value = paris.numOfCookies[key];
+            
+            let cell = document.createElement('td');
+            cell.textContent = value;
+            row.appendChild(cell);
+        }
+            tableBody.appendChild(row);
 }
 
 };
@@ -308,7 +389,7 @@ let lima = {
         let ListEl = document.getElementById('data5');
         for (let i = 0; i < hours.length; i++) {
             let newListEl = document.createElement('li');
-            newListEl.textContent = `${hours[i]}: ${seattle.numOfCookies[i]} cookies`;
+            newListEl.textContent = `${hours[i]}: ${lima.numOfCookies[i]} cookies`;
             ListEl.appendChild(newListEl);
             // display[i] = `${hours[i]}: ${this.numOfCookies[i]} cookies`
         
@@ -317,19 +398,33 @@ let lima = {
     let totalAmount= document.createElement('li');
     totalAmount.textContent= `Total: ${this.totalCookie} cookies` ;
     ListEl.appendChild(totalAmount);
+
+    let tableBody = document.getElementById('table');
+        let row = document.createElement('tr');
+
+        let th = document.createElement("th");
+        th.innerText = this.location;
+        row.appendChild(th);
+
+        for (let key in lima.numOfCookies){
+
+            console.log(key);
+            let value = lima.numOfCookies[key];
+            
+            let cell = document.createElement('td');
+            cell.textContent = value;
+            row.appendChild(cell);
+        }
+            tableBody.appendChild(row);
 }
 
 };
 lima.render();
 
-console.log(seattle.numOfCustomers);
-console.log(seattle.numOfCookies);
 
-console.log(seattle.totalCookie);
+
 //seattle.calDisplay();
-console.log(display);
-console.log(seattle.avrgCookiePerHour());
-//console.log(seattle.calDisplay());
+
 
 
 // let ListEl = document.getElementById('data');
