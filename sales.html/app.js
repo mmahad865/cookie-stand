@@ -421,6 +421,30 @@ let lima = {
 };
 lima.render();
 
+// let total = {
+
+
+
+
+// let tableBody = document.getElementById('table');
+//         let row = document.createElement('tr');
+
+//         let th = document.createElement("th");
+//         th.innerText = this.location;
+//         row.appendChild(th);
+
+//         for (let key in tokyo.numOfCookies){
+
+//             console.log(key);
+//             let value = tokyo.numOfCookies[key];
+            
+//             let cell = document.createElement('td');
+//             cell.textContent = value;
+//             row.appendChild(cell);
+//         }
+//             tableBody.appendChild(row);
+
+
 
 
 //seattle.calDisplay();
