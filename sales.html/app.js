@@ -2,7 +2,7 @@
 let hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm' ];
 //let display= [];
 
-function store(location, min, max, avrgCookie){
+function Store(location, min, max, avrgCookie){
     this.location = location;
     this.min = min;
     this.max = max;
@@ -16,11 +16,11 @@ function store(location, min, max, avrgCookie){
 
 
 
-store.prototype.numOfCustomers = function (){
+Store.prototype.numOfCustomers = function (){
     return Math.ceil(Math.random() * ((this.max) - (this.min)) + this.min);
 };
 
-store.prototype.getAvgCookie = function(){
+Store.prototype.getAvgCookie = function(){
     this.numOfCustomers();
     for(let i=0; i<hours.length;i++){
         let avgCookie = Math.round(this.avrgCookie * this.numOfCustomers());
@@ -30,7 +30,7 @@ store.prototype.getAvgCookie = function(){
     // return math.round(this.avrgCookie * this.numOfCustomers());
 };
 
-store.prototype.render = function(){
+Store.prototype.render = function(){
     this.getAvgCookie();
     let tableBody = document.getElementById('table');
         let row = document.createElement('tr');
@@ -54,7 +54,15 @@ store.prototype.render = function(){
 
     
         // tableEl.appendChild(tableEl);
-}
+};
+
+function renderTableFooter (allstores){
+    let totalAmount = document.getElementById('tfooter');
+    if (totalAmount){
+        totalAmount.remove();
+    }
+
+};
 
 
 // function createLocatioRows (){
@@ -78,14 +86,26 @@ store.prototype.render = function(){
 //         totalAmount.textContent= `Total: ${this.totalCookie}`;
 //         ListEl.appendChild(totalAmount);
 // }
+let formEl = document.getElementById('form1');
+formEl.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+
+    let store = event.target.store.value;
+    let min = event.target.min.value;
+    let max = event.target.max.value;
+    let avrgCookie = event.target.avgCookie.value;
+    let newStore= new Store(store, min, max, avrgCookie);
+    console.log(newStore);
+});
 
 
 let allstores=[];
-let seattle = new store("seattle", "23", "65", "6.3", [], [],0);
-let tokyo = new store("tokyo" , "3", "24", "1.2");
-let dubai = new store("dubai", "11", "38", "1.2");
-let paris = new store("paris", "20", "38", "2.8");
-let lima = new store("lima", "2", "16", "4.8");
+let seattle = new Store("seattle", "23", "65", "6.3", [], [],0);
+let tokyo = new Store("tokyo" , "3", "24", "1.2");
+let dubai = new Store("dubai", "11", "38", "1.2");
+let paris = new Store("paris", "20", "38", "2.8");
+let lima = new Store("lima", "2", "16", "4.8");
 // createLocatioRows();
 seattle.render();
 tokyo.render();

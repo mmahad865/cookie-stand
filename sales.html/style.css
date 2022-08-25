@@ -3,10 +3,15 @@
 table,th,td {
     border: 1px solid black;
     border-collapse: collapse;
+    s
 }
 
 tr:nth-child(even) {
     background-color: #D6EEEE;
+}
+
+tr:nth-child(odd) {
+    background-color: blueviolet;
 }
 table {
     width: 100%;
@@ -18,4 +23,11 @@ table {
 
 #salmon{
     text-align: center;
+}
+
+table {
+    width: 100%;
+}
+th{
+    height: 70px;
 }
