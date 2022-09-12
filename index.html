@@ -1,187 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Salmon Cookie</title>
-
-    
-    
-
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
-        <img id="top" src="https://raw.githubusercontent.com/codefellows/seattle-201d89/main/class-08/lab-b/assets/salmon.png">
-        <h1>Salmon Cookie</h1>
+        <div id="headernav">
+            <div id="logo">
+                <a href="index.html">
+                    <img src="img/salmon.png">
+                </a>
+            </div>
+            <h1>Salmon Cookie Data</h1>
+            <nav>
+                <ul>
+                    <li>
+                    </li>
+                    <li>
+                        <a class="link" href="store.html">store
+                    </li>
+                    <li>
+                        <a class="link" href="History.html">History</a>
+                    </li>
+                    <li>
 
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
-
-    <h2>Store Data</h2>
-    <h1 id="salmon"></h1>
-    <div class="webpage">
-        <table id="one">
-            <thead>
-                <tr>
-                    <th> City </th>
-                    <th>7am</th>
-                    <th>8am</th>
-                    <th>9am</th>
-                    <th>10am</th>
-                    <th>11am</th>
-                    <th>12pm</th>
-                    <th>1pm</th>
-                    <th>2om</th>
-                    <th>3pm</th>
-                    <th>4pm</th>
-                    <th>5pm</th>
-                    <th>6pm</th>
-                    <th>7pm</th>
-                    <th>8pm</th>
-                    <th id="total">Total daily location
-                    </th>
-
-                </tr>
-            </thead>
-            <tbody id="table">
-                <!-- <td> </td> -->
-            </tbody>
-        </table>
-        <nav>
+    <table id="cookies"></table>
+    <form id="storeForm">
+        <fieldset>
+            <legend>Add a New Store</legend>
             <ul>
-                <li><a href="index.html"></a> </li>
-                <li><a href="sales.html"></a></li>
+                <li>
+                    <label for="minCustPerHour">Min Cust Per Hour</label>
+                    <input type="number" name="minCustPerHour" id="salesFigures">
+                </li>
+                <li>
+                    <label for="maxCustPerHour">Max Cust Per Hour</label>
+                    <input type="number" name="maxCustPerHour" id="salesFigures">
+                </li>
+                <li>
+                    <label for="avgCookiePerSale">Avg Cookie Per Sale</label>
+                    <input type="number" name="avgCookiePerSale" id="salesFigures">
+                </li>
+                <li>
+                    <label for="location">Location</label>
+                    <input type="text" name="location" id="salesFigures">
+                </li>
+                <li>
+                    <button>Add a new Store</button>
+                </li>
             </ul>
-        </nav>
-
-        <h3>location</h3>
-        <ul>
-            <li>Seattle</li>
-            <li>Tokyo</li>
-            <li>Dubai</li>
-            <li>Paris</li>
-            <li>Lima</li>
-        </ul>
-        <section>
-        <h3>Store Hours</h3>
-            <p>All stores operate from 7am to 8pm daily</p>
-            </section>
-
-            <div class="row">
-                <div class="colum">
-                    <img src="https://raw.githubusercontent.com/codefellows/seattle-201d89/main/class-08/lab-b/assets/fish.jpg">
-                </div>
-                <div class="row">
-                    <div class="colum">
-                        <img src="https://raw.githubusercontent.com/codefellows/seattle-201d89/main/class-08/lab-b/assets/cutter.jpeg">
-                    </div>
-                    <div class="row">
-                        <div class="colum">
-                            <img id="family" src="https://raw.githubusercontent.com/codefellows/seattle-201d89/main/class-08/lab-b/assets/family.jpg">
-                        </div>
-
-                        <h3>About us</h3>
-                        <p>We're a sales performance agency. We've been helping businesses drive revenue with the use of inbound marketing and
-                        sales
-                        enablement tactics since 2022.</p>
-        
-
-        <!-- <table>
-        
-            <thead>
-                <tr>
-                    <th> City </th>
-                    <th>6</th>
-                    <th>7</th>
-                    <th>8</th>
-                </tr>
-            </thead>
-        
-        
-        
-            <tbody>
-                <tr>
-                    <td>Seattle</td>
-                    <td>$100</td>
-                    <td> $200 </td>
-                    <td> $300 </td>
-                </tr>
-                <tr>
-                    <td>Tacoma</td>
-                    <td>$100</td>
-                    <td> $200 </td>
-                    <td> $300 </td>
-                </tr>
-                <tr>
-                    <td>Burien</td>
-                    <td>$100</td>
-                    <td> $200 </td>
-                    <td> $300 </td>
-                </tr>
-            </tbody>
-            <tfoot>
-                <tr>
-                    <th>Total</th>
-                    <td>$180</td>
-                </tr>
-            </tfoot>
-        </table> -->
-
-
-        
-
-
-
-        <!-- <h1 class="header">
-            Seattle
-        </h1>
-        <ul id="data"></ul>
-    
-    </div>
-    <div class="webpage2">
-        <h1 class="header2">
-            Tokyo
-        </h1>
-        <ul id="data2"></ul>
-    
-    </div>
-    <div class="webpage3">
-        <h1 class="header3">
-            Dubai
-        </h1>
-        <ul id="data3"></ul>
-    
-    </div>
-    <div class="webpage4">
-        <h1 class="header4">
-           Paris
-        </h1>
-        <ul id="data4"></ul>
-
-    
-    </div>
-    <div class="webpage5">
-        <h1 class="header5">
-            Lima
-        </h1>
-        <ul id="data5"></ul>
-    
-    </div> -->
-    <nav id="Forms"></nav>
-    <form id="form1">
-        <fieldset id="field">
-            <legend id="submit-header">Please Submit a new store</legend>
-            <input name="store" type="text" placeholder="store name">
-            <input name="min" type="number" placeholder="minimum customer">
-            <input name="max" type="number" placeholder="maxmimum customer">
-            <input name="avgCookie" type="number" placeholder="average Cookie per customer">
         </fieldset>
-        <button type="submit">submmit</button>
     </form>
     <script src="app.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <!-- <footer>&copy;</footer> -->
 </body>
-<footer>
-    contant us @ 123-456-789
-</footer>
+
 </html>
